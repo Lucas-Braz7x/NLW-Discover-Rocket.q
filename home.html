@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <title>Criar sala - Rocket.Q</title>
+  <!-- generic meta -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- view port -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Criar sala - Rocket.Q</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/home.css">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="images/logo.svg" alt="Logo da Rocket.Q" />
-  </header>
-  <main>
-    <div class="container">
-      <section>
-        <h2>Entre como participante</h2>
-      </section>
+  <div id="home" class="content">
+    <header>
+      <img src="images/logo.svg" alt="Logo da Rocket.Q" />
+    </header>
+
+    <div id="bg">
+
     </div>
-  </main>
+
+    <main>
+      <div class="container">
+        <section>
+          <h2>Entre como participante</h2>
+          <form action="">
+            <label class="sr-only" for="room-id">Código da sala</label>
+            <input id="room-id" type="number" placeholder="Código da sala">
+              <button>
+                <img src="images/enter-room.svg" alt="Entrar na sala">
+                Entrar na sala
+              </button>
+            </input>
+          </form>
+        </section>
+        
+        <div class="separator">
+          <div></div>
+          <div>ou</div>
+          <div></div>
+        </div>
+  
+        <section>
+          <h2>Crie sua própria sala de forma fácil</h2>
+          <a class="button outlined" href="create-room.html"><img src="images/users.svg" alt="Criar sala"> Criar sala</a>
+        </section>
+  
+      </div>
+    </main>
+  </div>
+  
 </body>
 </html>
