@@ -26,8 +26,8 @@ html{/*Variaveis*/
 }
 
 body{
+  display: flex;
   height: 100vh;/*100% da tela independente do tela*/
-  width: 100vw;
   background: var(--background);
 }
 
