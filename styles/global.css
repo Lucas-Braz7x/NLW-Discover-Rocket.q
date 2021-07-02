@@ -19,7 +19,7 @@ html{/*Variaveis*/
   --grey-dark: #4d5e77;
   --grey-blue: #a1b2cd;
   --grey-light: #e5eaf1;
-
+  --grey-medium: #eaecf2;
   /* 1rem = 16px = 100% */
   /* Tornando padrão para 10px */
   font-size: 62.5%;
@@ -85,7 +85,8 @@ button:hover, .button:hover{
   transition: filter 2s;
 }
 
-button >img .button>img{
+button >img,
+.button>img{
   margin-right: 1rem ;
   width: 2rem;
 }
@@ -95,6 +96,18 @@ button.outlined,
   background: var(--white);
   color: var(--blue);
   border: .2rem solid var(--blue);
+}
+
+button.red,
+.button.red{
+  background: var(--red);
+  color: var(--white);
+}
+
+button.grey,
+.button.grey{
+  color: var(--grey-dark);
+  background: var(--grey-light);
 }
 
 /* Header */
