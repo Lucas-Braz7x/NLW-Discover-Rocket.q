@@ -13,8 +13,7 @@ route.get('/create-pass', (req, res) =>{
   res.render("create-pass");
 });
 
-route.get('/room/:room/:question/:action', (req, res) =>{
-  res.render("exemplo", {req});
-})
+/* Formato da modal de pasar informação */
+//route.post('/room/:room/:question/:action');
 
 module.exports = route; 
