@@ -10,6 +10,8 @@ server.use(express.static('public'));//Usando a pasta public
 
 server.set('views', path.join(__dirname, 'views'));//Definindo o caminho da pasta views
 
+server.use(express.urlencoded({extended: true}));//Middleware decodifica as informações que são passadas através da modal
+
 server.use(route);//Usando o arquivo rotas
 
 server.listen(3006, () =>{console.log('Rodando')}) //Determina a porta do servidor

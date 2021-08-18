@@ -1,4 +1,5 @@
 const express = require('express');
+const QuestionController = require('./controllers/QuestionController');
 
 const route = express.Router();
 
@@ -13,7 +14,7 @@ route.get('/create-pass', (req, res) =>{
   res.render("create-pass");
 });
 
-/* Formato da modal de pasar informação */
-//route.post('/room/:room/:question/:action');
+/* Formato da modal de passar informação */
+route.post('/room/:room/:question/:action', QuestionController.index );
 
 module.exports = route; 
