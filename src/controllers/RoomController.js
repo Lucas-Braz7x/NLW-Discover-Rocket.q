@@ -38,5 +38,11 @@ module.exports = {
     await db.close();
 
     res.redirect(`/room/${roomId}`);
+  },
+
+  open(req, res){
+    console.log(req.params.roomId)
+    const roomId =  req.params.roomId;
+    res.render("room", {roomId: roomId});
   }
 }
