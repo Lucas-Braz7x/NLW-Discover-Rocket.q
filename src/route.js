@@ -18,6 +18,7 @@ route.get('/room/:roomId', RoomController.open);
 
 
 /* Formato da modal de passar informação */
+route.post('/question/create/:room', QuestionController.create );
 route.post('/question/:room/:question/:action', QuestionController.index );
 
 

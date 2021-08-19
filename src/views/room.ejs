@@ -42,7 +42,7 @@
       <main>
         <section id="question-form">
           <h2>Faça sua pergunta</h2>
-          <form action="">
+          <form action="/question/create/<%=roomId%>" method="POST">
             <label for="question" class="sr-only">O que você quer perguntar?</label>
             <textarea name="question" id="question" placeholder="O que você quer perguntar"></textarea>
 
@@ -59,26 +59,48 @@
           <h2 class="sr-only">Perguntas da comunidade</h2>
           <div class="questions">
 
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="Avatar">
+            <%questions.forEach(question =>{%>
+              <div class="question-wrapper">
+                <div class="question-content">
+                  <div class="user">
+                    <img src="/images/user.svg" alt="Avatar">
+                  </div>
+                  <div class="question">
+                    <p><%=question.title%></p>
+                  </div>
                 </div>
-                <div class="question">
-                  <p>Qual a diferença entre const, var e let no JS</p>
+                <div class="actions">
+                  <a class="check" href="#" data-id="1">
+                    <img src="/images/check.svg" alt="Marcar como lida">
+                    Marcar como lida
+                  </a>
+                  <a class="delete" href="#" data-id="1">
+                    <img src="/images/trash.svg" alt="Excluir">
+                    Excluir
+                  </a>
                 </div>
               </div>
-              <div class="actions">
-                <a class="check" href="#" data-id="1">
-                  <img src="/images/check.svg" alt="Marcar como lida">
-                  Marcar como lida
-                </a>
-                <a class="delete" href="#" data-id="1">
-                  <img src="/images/trash.svg" alt="Excluir">
-                  Excluir
-                </a>
+            <%})%>
+
+            <%questionsRead.forEach(questionRead =>{%>
+              <div class="question-wrapper read">
+                <div class="question-content">
+                  <div class="user">
+                    <img src="/images/user.svg" alt="Avatar">
+                  </div>
+                  <div class="question">
+                    <p><%=questionRead.title%></p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <a class="delete" href="#" data-id="1">
+                    <img src="/images/trash.svg" alt="Excluir">
+                    Excluir
+                  </a>
+                </div>
               </div>
-            </div>
+            <%})%>
+
           </div>
         </section>
       </main>
