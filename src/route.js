@@ -15,6 +15,7 @@ route.get('/create-pass', (req, res) =>{
 
 route.post('/create-room', RoomController.create );
 route.get('/room/:roomId', RoomController.open);
+route.post('/enter-room', RoomController.enter);
 
 
 /* Formato da modal de passar informação */
